@@ -1,0 +1,4 @@
+pip>=20.1
+Django<3.0.0
+gunicorn>=19.9.0
+django-heroku

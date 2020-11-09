@@ -22,14 +22,22 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'tdgp8r)!0w*hdghi&azr$xf-5&a8b2@ust=$w4!3&x1hx1pwm5'
 
+######## Heroku Deploymnet ########
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# Deployment in heroku!
 ALLOWED_HOSTS = ['heroku-django-skeleton.herokuapp.com', '127.0.0.1']
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+MEDIA_URL = '/media/'
+STATIC_ROOT = BASE_DIR / 'media'
+######## Heroku Deploymnet ########
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,7 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -84,10 +91,8 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -103,26 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
-
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# CRISPY_TEMPLATE_PACK = 'uni_form'

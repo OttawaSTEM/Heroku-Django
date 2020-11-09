@@ -1,5 +1,5 @@
-pip>=20.1
 django-heroku
-Django<3.0.0
-gunicorn>=19.9.0
+Django
+gunicorn
 django-heroku
+django-crispy-forms

@@ -126,10 +126,12 @@ ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 STATIC_ROOT = BASE_DIR / 'media'
+
+ADMIN_MEDIA_PREFIX = '/static/admin/' 
 
 django_heroku.settings(locals())
 ######## Heroku Deploymnet ########

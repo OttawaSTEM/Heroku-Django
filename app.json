@@ -1,7 +1,3 @@
 {
-    "name": "Heroku Github deployment",
-    "description": "Heroku Django deployment",
-    "repository": "https://github.com/OttawaSTEM/Heroku-Django",
-    "logo": "https://ottawastem.com/static/site/img/logo-big.png",
-    "keywords": ["heroku", "django", "github"]
+    "stack": "heroku-20"
 }

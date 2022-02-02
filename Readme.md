@@ -1,13 +1,8 @@
 # Deploy in Heroku from Github
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/OttawaSTEM/Heroku-Django.git/)
-Heroku deploy everytime will clean the data!
 
 # Create App from Heroku
 
 # Connect Github in Heroku
-
-# runtime.txt
-python-3.7.7
 
 # Porcfile
 web: gunicorn --pythonpath="$PWD/mysite" mysite.wsgi

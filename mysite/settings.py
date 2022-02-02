@@ -27,7 +27,7 @@ SECRET_KEY = 'tdgp8r)!0w*hdghi&azr$xf-5&a8b2@ust=$w4!3&x1hx1pwm5'
 DEBUG = False
 
 # Deployment in heroku!
-ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', 'ottawastem-flutter-backend.herokuapp.com', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

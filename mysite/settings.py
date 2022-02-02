@@ -18,17 +18,30 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
+######## Heroku Deploymnet ########
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# Deployment in heroku!
+ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+MEDIA_URL = 'media/'
+STATIC_ROOT = BASE_DIR / 'media'
+######## Heroku Deploymnet ########
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['ottawastem-flutter-backend.herokuapp.com', '127.0.0.1', '0.0.0.0']
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -112,23 +125,4 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-######## Heroku Deploymnet ########
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-# Deployment in heroku!
-ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
-MEDIA_URL = 'media/'
-STATIC_ROOT = BASE_DIR / 'media'
-
-ADMIN_MEDIA_PREFIX = '/static/admin/' 
-######## Heroku Deploymnet ########

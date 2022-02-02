@@ -122,7 +122,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEBUG = False
 
 # Deployment in heroku!
-ALLOWED_HOSTS = ['ottawastem-flutter-backend.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

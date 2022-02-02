@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 ######## Heroku Deploymnet ########
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Deployment in heroku!
 ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'mysite.urls'

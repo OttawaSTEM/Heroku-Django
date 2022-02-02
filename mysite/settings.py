@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import django_heroku
 from pathlib import Path
 
+
+# New for Django 3.2
+# https://docs.djangoproject.com/en/3.2/releases/3.2/#customizing-type-of-auto-created-primary-keys
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -48,7 +53,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
 
-    'polls',
+    'polls'
 ]
 
 MIDDLEWARE = [

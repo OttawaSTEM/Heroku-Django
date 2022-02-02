@@ -18,3 +18,7 @@ import django_heroku
 
 Add to the bottom of setting.py 
 django_heroku.settings(locals())
+
+
+python manage.py migrate
+python manage.py createsuperuser

@@ -91,11 +91,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR.joinpath('database', 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.joinpath('database', 'db.sqlite3'),
-    }
+    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
+    'default': env.db()
 }
 
 

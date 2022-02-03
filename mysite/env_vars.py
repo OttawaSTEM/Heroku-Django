@@ -22,4 +22,3 @@ else:
     if os.path.exists(env_file):
         environ.Env.read_env(str(env_file))
     DEBUG = True
-    print('development')

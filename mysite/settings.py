@@ -98,7 +98,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 DATABASES = {
-    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
     'default': env.db()
 }
 

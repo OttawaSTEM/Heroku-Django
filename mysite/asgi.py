@@ -10,11 +10,11 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 import os
 
 if os.environ.get('DJANGO_ENVIRONMENT') == 'Development':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_skeleton.settings.development')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.development')
 elif os.environ.get('DJANGO_ENVIRONMENT') == 'Deployment':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_skeleton.settings.deployment')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.deployment')
 else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_skeleton.settings.production')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.production')
 
 from django.core.asgi import get_asgi_application
 application = get_asgi_application()

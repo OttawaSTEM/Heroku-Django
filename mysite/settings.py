@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = False           # Must run python manage.py collect static, otherwise cause Server Error (500)
-CSRF_TRUSTED_ORIGINS = ['https://ottawastem-django.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://ottawastem-django.herokuapp.com']      # When DEBUG=False in Deployment
 
 # Deployment in heroku!
 # ALLOWED_HOSTS = ['*']

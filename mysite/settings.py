@@ -9,19 +9,20 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+from .env_vars import env, BASE_DIR
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 ######## Heroku Deploymnet ########
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False           # Must run python manage.py collect static, otherwise cause Server Error (500)
-CSRF_TRUSTED_ORIGINS = ['https://ottawastem-django.herokuapp.com']      # When DEBUG=False in Deployment
+DEBUG = True
+# DEBUG = False           # Must run python manage.py collect static, otherwise cause Server Error (500)
+# CSRF_TRUSTED_ORIGINS = ['https://ottawastem-django.herokuapp.com']      # When DEBUG=False in Deployment
 
 # Deployment in heroku!
 # ALLOWED_HOSTS = ['*']
@@ -37,7 +38,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ######## Heroku Deploymnet ########
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj'
+# SECRET_KEY = 'django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj'
+SECRET_KEY = env('SECRET_KEY')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

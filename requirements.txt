@@ -1,5 +1,5 @@
 Django
-gunicorn
 daphne
 whitenoise
+django-environ
 django-crispy-forms

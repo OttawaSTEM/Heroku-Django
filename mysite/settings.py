@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = False
 
 # Deployment in heroku!
-ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com']
+# ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

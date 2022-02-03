@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 venv/
 
-# SQLite3 database files:
+# SQLite3 database files, include for container deployment
 # *.db
 # *.sqlite3
 # *.sqlite
@@ -12,8 +12,8 @@ venv/
 *.log
 logs/
 
-# Environment variables
-local.env
+# !!!!!!!! Environment variables, disable this in production !!!!!!!!
+# local.env
 
 # Django stuff:
 media/
@@ -45,6 +45,3 @@ local/
 
 # Bootstrap & Admin
 bootstrap/
-
-# Microsoft VSCode
-.vscode/

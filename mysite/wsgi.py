@@ -1,5 +1,5 @@
 """
-For local development
+For local development "python manage.py runserver"
 """
 
 import os

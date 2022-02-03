@@ -10,23 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from .env_vars import env, BASE_DIR
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+ALLOWED_HOSTS = eval(env('ALLOWED_HOSTS'))
 
-######## Heroku Deploymnet ########
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# DEBUG = False           # Must run "python manage.py collect static", otherwise cause Server Error (500)
-# CSRF_TRUSTED_ORIGINS = ['https://ottawastem-django.herokuapp.com']      # When DEBUG=False in Deployment
-
-# Deployment in heroku!
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -44,7 +32,6 @@ SECRET_KEY = env('SECRET_KEY')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 # Application definition
 INSTALLED_APPS = [
@@ -85,26 +72,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mysite.wsgi.application'
-
+# WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR.joinpath('database', 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': env.db()
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -120,18 +97,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
-

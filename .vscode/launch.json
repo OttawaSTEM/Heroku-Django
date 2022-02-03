@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\manage.py",
+            "args": [
+                "runserver"
+            ],
+            "env": {
+                "DJANGO_ENVIRONMENT": "Development"
+                // "DJANGO_ENVIRONMENT": "Container",
+                // "DATABASE_URL": "sqlite:///database/db.sqlite",
+                // "SECRET_KEY": "django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj"
+            },
+            "django": true
+        }
+    ]
+}

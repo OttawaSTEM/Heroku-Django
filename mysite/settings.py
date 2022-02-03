@@ -19,12 +19,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 ######## Heroku Deploymnet ########
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
 # Deployment in heroku!
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
+# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

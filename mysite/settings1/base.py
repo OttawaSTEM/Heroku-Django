@@ -12,18 +12,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print(BASE_DIR)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 ######## Heroku Deploymnet ########
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+DEBUG = False
 
 # Deployment in heroku!
-# ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com']
+ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com']
 # ALLOWED_HOSTS = ['ottawastem-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 # Static files (CSS, JavaScript, Images)
@@ -34,6 +35,7 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ######## Heroku Deploymnet ########
+print(STATIC_ROOT)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj'

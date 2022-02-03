@@ -1,4 +1,5 @@
 Django
 gunicorn
+daphne
 whitenoise
 django-crispy-forms

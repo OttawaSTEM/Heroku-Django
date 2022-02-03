@@ -4,8 +4,8 @@ import sys
 def main():
     if os.environ.get('DJANGO_ENVIRONMENT') == 'Development':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.development')
-    elif os.environ.get('DJANGO_ENVIRONMENT') == 'Deployment':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.deployment')
+    elif os.environ.get('DJANGO_ENVIRONMENT') == 'Container':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.container')
     else:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings.production')
 

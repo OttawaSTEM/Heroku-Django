@@ -12,3 +12,12 @@ default user account: admin/admin
 
 
 # This also suitalbe to Azure Web App deployment
+
+
+# Deploy options:
+DJANGO_ENVIRONMENT = Development:
+    mysite.settings.development
+DJANGO_ENVIRONMENT = Container:
+    mysite.settings.container
+DJANGO_ENVIRONMENT = VirtualMachine:
+    mysite.settings.virtualmachine

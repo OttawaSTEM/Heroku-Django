@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from .env_vars import env, BASE_DIR
 
-# Quick-start development settings - unsuitable for production
+# Django deployment check list
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
 ALLOWED_HOSTS = eval(env('ALLOWED_HOSTS'))
 
 
@@ -25,8 +26,6 @@ MEDIA_ROOT = BASE_DIR.joinpath('media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ######## Heroku Deploymnet ########
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj'
 SECRET_KEY = env('SECRET_KEY')
 
 # Default primary key field type

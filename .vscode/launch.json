@@ -14,9 +14,6 @@
             ],
             "env": {
                 "DJANGO_ENVIRONMENT": "Development"
-                // "DJANGO_ENVIRONMENT": "Container",
-                // "DATABASE_URL": "sqlite:///database/db.sqlite",
-                // "SECRET_KEY": "django-insecure-iub568e7_r8wykb2v__lvorigxktfkc^4wrv696gi2p-&-5cwj"
             },
             "django": true
         }
